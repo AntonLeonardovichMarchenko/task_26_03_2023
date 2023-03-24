@@ -1,0 +1,84 @@
+'''
+программа Викторина на основе библиотеки random
+Есть 10 известных людей и их даты рождения в формате '2.1.1988' ('dd.mm.yyyy')
+Программа выбирает 5 случайных людей из 10, это реализуется с помощью
+модуля random и функции sample
+
+После того как выбраны 5 случайных людей,  пользователю предлагается
+ввести их дату рождения.
+дата вводится в формате 'dd.mm.yyyy'. Например 3.1.2009.
+Если пользователь ответил неверно, то выводится правильный ответ,
+но уже в следующем виде (формате):
+Например третье января 2009 года.
+В конце считается количество правильных и неправильных ответов
+и предлагаем начать игру снова
+'''
+
+from victory import TheBornExpert
+
+def main():
+    DoIt()
+
+# Преимущества инициализация списка известных людей в main.DoIt:
+# = нагляднее
+# = проще
+# = легче модифицируется
+# ========================================================================
+def DoIt():
+   persons = [[], [], []]
+
+   i = 0
+   persons[0].append(i)
+   persons[1].append('Stalin')
+   persons[2].append('21.12.1879')
+
+   i+=1
+   persons[0].append(i)
+   persons[1].append('Marx')
+   persons[2].append('5.5.1818')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Engels')
+   persons[2].append('28.11.1820')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Mussolini')
+   persons[2].append('29.7.1883')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Hitler')
+   persons[2].append('20.4.1889')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Bizet')
+   persons[2].append('25.10.1838')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Zedong')
+   persons[2].append('26.12.1893')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Castro')
+   persons[2].append('13.8.1926')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Gaddafi')
+   persons[2].append('7.6.1942')
+
+   i += 1
+   persons[0].append(i)
+   persons[1].append('Mandela')
+   persons[2].append('18.7.1918')
+
+   TheBornExpert.DateTimeTest(persons, 10)
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    main()
